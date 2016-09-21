@@ -1,0 +1,32 @@
+<h1>Dialects</h1>
+<table>
+  <% @dialects.each do |dialect| %>
+    <tr>
+      <td><%= link_to 'x', dialect_path(dialect),
+              method: :delete,
+              data: { confirm: "Remove dialect #{dialect.name}?" } %></td>
+      <%= form_for dialect do |f| %>
+        <td><%= f.text_field :name %></td>
+        <td><%= f.submit "v" %></td>
+      <% end %>
+    </tr>
+  <% end %>
+  <tr>
+    <td></td>
+    <%= form_for @new_dialect do |f| %>
+      <td><%= f.text_field :name %></td>
+      <td><%= f.submit "+" %></td>
+    <% end %>
+  </tr>
+</table>
+
+<% if @pending_errors.any? %>
+  <div id="error_explanation">
+    <h2>Error:</h2>
+    <ul>
+      <% @pending_errors.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
