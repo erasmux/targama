@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  word: MyString
+  word_inflection: MyString
+  gram_form: one
+  dialect: one
+  additional_info: MyString
+
+two:
+  word: MyString
+  word_inflection: MyString
+  gram_form: two
+  dialect: two
+  additional_info: MyString
