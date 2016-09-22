@@ -1,2 +1,11 @@
 en:
-  hello: "Hello world"
+  common:
+    error: "error"
+    errors: "errors"
+    remove: "remove"
+
+  # views:
+  dialects:
+    index:
+      title: "Dialects"
+      dialect: "dialect"

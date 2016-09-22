@@ -1,0 +1,11 @@
+he:
+  common:
+    error: "שגיאה"
+    errors: "שגיאות"
+    remove: "הסר"
+
+  # views:
+  dialects:
+    index:
+      title: "ניבים"
+      dialect: "ניב"

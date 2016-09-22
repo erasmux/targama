@@ -1,10 +1,11 @@
-<h1>Dialects</h1>
+<h1><%= t '.title' %></h1>
+<br>
 <table>
   <% @dialects.each do |dialect| %>
     <tr>
       <td><%= link_to 'x', dialect_path(dialect),
               method: :delete,
-              data: { confirm: "Remove dialect #{dialect.name}?" } %></td>
+              data: { confirm: "#{t('common.remove').capitalize} #{t('.dialect')} #{dialect.name}?" } %></td>
       <%= form_for dialect do |f| %>
         <td><%= f.text_field :name %></td>
         <td><%= f.submit "v" %></td>
@@ -22,7 +23,7 @@
 
 <% if @pending_errors.any? %>
   <div id="error_explanation">
-    <h2>Error:</h2>
+    <h2><%=t(@pending_errors.count==1 ? 'error' : 'errors',scope: :common).capitalize%>:</h2>
     <ul>
       <% @pending_errors.each do |msg| %>
         <li><%= msg %></li>
