@@ -4,8 +4,12 @@ he:
     errors: "שגיאות"
     remove: "הסר"
 
+  # models:
+  activerecord:
+    models:
+      dialect: "ניב"
+
   # views:
   dialects:
     index:
       title: "ניבים"
-      dialect: "ניב"

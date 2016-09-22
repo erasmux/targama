@@ -1,0 +1,31 @@
+<table>
+  <% @records.each do |record| %>
+    <tr>
+      <td><%= link_to 'x', record_path(record),
+              method: :delete,
+              data: { confirm: "#{t('common.remove').capitalize} #{@klass.model_name.human} #{record.send(@fname)}?" } %></td>
+      <%= form_for record do |f| %>
+        <td><%= f.text_field @fname %></td>
+        <td><%= f.submit "v" %></td>
+      <% end %>
+    </tr>
+  <% end %>
+  <tr>
+    <td></td>
+    <%= form_for @new_record do |f| %>
+      <td><%= f.text_field @fname %></td>
+      <td><%= f.submit "+" %></td>
+    <% end %>
+  </tr>
+</table>
+
+<% if @pending_errors.any? %>
+  <div id="error_explanation">
+    <h2><%= t(@pending_errors.count==1 ? 'error' : 'errors',scope: :common).capitalize %>:</h2>
+    <ul>
+      <% @pending_errors.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
