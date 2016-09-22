@@ -1,4 +1,10 @@
 he:
+  # config: (strings which, in theory, should be "user" configurable)
+  config:
+    tlang: "ערבית"
+    tword: &config_tword "מילה (ערבית)"
+
+  # common:
   common:
     error: "שגיאה"
     errors: "שגיאות"
@@ -7,8 +13,16 @@ he:
   # models:
   activerecord:
     models:
-      dialect: "ניב"
-      gram_form: "צורה דיקדוקית"
+      dialect: &model_dialect "ניב"
+      gram_form: &model_gram_form "צורה דיקדוקית"
+      tword: *config_tword
+    attributes:
+      tword:
+        word: *config_tword
+        word_inflection: "הטיה"
+        gram_form_id: *model_gram_form
+        dialect_id: *model_dialect
+        additional_info: "מידע נוסף"
 
   # views:
   dialects:
@@ -17,3 +31,8 @@ he:
   gram_forms:
     index:
       title: "צורות דיקדוקיות"
+  twords:
+    new:
+      title: "הוספת מילה"
+    edit:
+      title: "עריכת מילה"

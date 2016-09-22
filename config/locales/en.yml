@@ -1,4 +1,10 @@
 en:
+  # config:
+  config:
+    tlang: "arabic"
+    tword: &config_tword "word (arabic)"
+
+  # common:
   common:
     error: "error"
     errors: "errors"
@@ -7,7 +13,13 @@ en:
   # models:
   activerecord:
     models:
-      gram_form: "grammatical forms"
+      gram_form: &model_gram_form "grammatical forms"
+      tword: *config_tword
+    attributes:
+      tword:
+        word: *config_tword
+        word_inflection: "inflection"
+        gram_form_id: *model_gram_form
 
   # views:
   dialects:
@@ -16,3 +28,8 @@ en:
   gram_forms:
     index:
       title: "Grammatical Forms"
+  twords:
+    new:
+      title: "Add word"
+    edit:
+      title: "Edit word"
