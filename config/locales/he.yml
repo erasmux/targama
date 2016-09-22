@@ -8,8 +8,12 @@ he:
   activerecord:
     models:
       dialect: "ניב"
+      gram_form: "צורה דיקדוקית"
 
   # views:
   dialects:
     index:
       title: "ניבים"
+  gram_forms:
+    index:
+      title: "צורות דיקדוקיות"

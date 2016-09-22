@@ -4,7 +4,15 @@ en:
     errors: "errors"
     remove: "remove"
 
+  # models:
+  activerecord:
+    models:
+      gram_form: "grammatical forms"
+
   # views:
   dialects:
     index:
       title: "Dialects"
+  gram_forms:
+    index:
+      title: "Grammatical Forms"
