@@ -1,6 +1,10 @@
 class TwordsController < ApplicationController
   helper_method :pending_errors, :pending_errors?
 
+  def index
+    @records = Tword.all
+  end
+
   def new
     @record = Tword.new
   end
@@ -26,6 +30,17 @@ class TwordsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def show
+    redirect_to action: 'index'
+  end
+
+  def destroy
+    @record = Tword.find(params[:id])
+    @record.destroy
+
+    redirect_to twords_path
   end
 
   def pending_errors?

@@ -1,0 +1,29 @@
+<h1><%= t '.title' %> (<%= t 'config.tlang' %>)</h1>
+
+<table cellpadding="5">
+  <tr>
+    <th></th>
+    <th><%= Tword.human_attribute_name(:word_short) %></th>
+    <th><%= link_to Tword.human_attribute_name(:gram_form_id), gram_forms_path %></th>
+    <th><%= link_to Tword.human_attribute_name(:dialect_id), dialects_path %></th>
+    <th><%= Tword.human_attribute_name(:additional_info) %></th>
+    <th></th>
+  </tr>
+
+  <% @records.each do |record| %>
+    <tr>
+      <td>
+        <%= link_to 'x', tword_path(record), method: :delete, class: "button_like",
+          data: { confirm: "#{t('common.remove').capitalize} #{Tword.human_attribute_name(:word_short)} #{record.word}?" } %>
+      </td>
+      <td><%= link_to record.word, edit_tword_path(record) %></td>
+      <td><%= record.gram_form.name %></td>
+      <td><%= record.dialect.name %></td>
+      <td><%= record.short_additional_info %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br>
+
+<%= link_to "#{t('helpers.submit.create') % {model: Tword.model_name.human}}", new_tword_path %>

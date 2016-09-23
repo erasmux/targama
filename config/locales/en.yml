@@ -18,6 +18,7 @@ en:
     attributes:
       tword:
         word: *config_tword
+        word_short: "word"
         word_inflection: "inflection"
         gram_form_id: *model_gram_form
 
@@ -29,6 +30,8 @@ en:
     index:
       title: "Grammatical Forms"
   twords:
+    index:
+      title: "Word list"
     new:
       title: "Add word"
     edit:
