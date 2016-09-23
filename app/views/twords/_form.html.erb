@@ -11,12 +11,10 @@
     <p>
       <%= f.label :gram_form_id %>
       <%= f.collection_select(:gram_form_id, GramForm.all, :id, :name, {prompt: ''})  %>
-      <%= link_to "...", gram_forms_path, target: "_blank", class: "button_like" %>
     </p>
     <p>
       <%= f.label :dialect_id %>
       <%= f.collection_select(:dialect_id, Dialect.all, :id, :name, {prompt: ''}) %>
-      <%= link_to "...", dialects_path, target: "_blank", class: "button_like" %>
     </p>
     <p>
       <%= f.label :additional_info %>
