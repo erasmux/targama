@@ -1,10 +1,13 @@
 class Tword < ApplicationRecord
   belongs_to :gram_form
-  belongs_to :dialect
+  belongs_to :dialect, optional: true
 
   validates :word, presence: true, allow_blank: false
   validates :gram_form_id, presence: true
-  validates :dialect_id, presence: true
+
+  def dialect_name
+    dialect ? dialect.name : ""
+  end
 
   def short_additional_info(max_length = 40)
     info = additional_info

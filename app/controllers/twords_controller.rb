@@ -54,9 +54,9 @@ class TwordsController < ApplicationController
 private
   def prepare_pending_errors
     # we remove these two message because our validation already produces
-    # better translated messages for gram form and dialect ids:
+    # better translated messages for gram form ids:
     @record.errors.full_messages.reject do |msg|
-      ['Gram form must exist', 'Dialect must exist'].include?(msg)
+      ['Gram form must exist'].include?(msg)
     end
   end
 
