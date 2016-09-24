@@ -13,8 +13,8 @@ he:
   # models:
   activerecord:
     models:
-      dialect: &model_dialect "ניב"
-      gram_form: &model_gram_form "צורה דיקדוקית"
+      dialect: &model_dialect "להג"
+      gram_form: &model_gram_form "צורה דקדוקית"
       tword: *config_tword
     attributes:
       tword:
@@ -29,18 +29,18 @@ he:
   nav:
     logo: "תרגמא"
     twords: "מילים בערבית"
-    gram_forms: "צורות דיקדוקיות"
-    dialects: "ניבים"
+    gram_forms: "צורות דקדוקיות"
+    dialects: "להגים"
   home:
     index:
       welcome: "ברוכים הבאים לתרגמא."
       under_construction: "האתר בבניה."
   dialects:
     index:
-      title: "ניבים"
+      title: "להגים"
   gram_forms:
     index:
-      title: "צורות דיקדוקיות"
+      title: "צורות דקדוקיות"
   twords:
     index:
       title: "רשימת מילים"
