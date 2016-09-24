@@ -1,5 +1,4 @@
 class SingleFieldController < ApplicationController
-  # helper methods which should be aliased (or defined) by derived class:
   helper_method :records_path
   helper_method :record_path
 
@@ -42,6 +41,14 @@ class SingleFieldController < ApplicationController
     @record.destroy
 
     redirect_to records_path
+  end
+
+  def records_path
+    send("#{@klass.name.underscore.pluralize}_path")
+  end
+
+  def record_path(record)
+    send("#{@klass.name.underscore}_path",record)
   end
 
 private
