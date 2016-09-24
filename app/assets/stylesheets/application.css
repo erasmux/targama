@@ -30,3 +30,15 @@
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
 }
+
+/* table-like elements: (i.e. to allow use a form for each rows) */
+div.table_like {
+    display:table;
+}
+form.tr_like,
+div.tr_like {
+    display:table-row;
+}
+span.td_like {
+    display:table-cell;
+}
