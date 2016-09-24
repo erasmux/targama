@@ -2,6 +2,32 @@ body {
   direction: rtl;
 }
 
+/* todo: seperate navbar styles and do ltr/rtl smarter... */
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+ul.nav li {
+    float: right;
+}
+
+ul.nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+ul.nav a:hover {
+    background-color: #111111;
+}
+
 /* todo: seperate simple_form_style styles and do ltr/rtl smarter... */
 
 .simple_form_style {

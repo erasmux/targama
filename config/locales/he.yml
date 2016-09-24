@@ -25,7 +25,12 @@ he:
         dialect_id: *model_dialect
         additional_info: "מידע נוסף"
 
-  # views:
+  # views and layouts:
+  nav:
+    logo: "תרגמא"
+    twords: "מילים בערבית"
+    gram_forms: "צורות דיקדוקיות"
+    dialects: "ניבים"
   dialects:
     index:
       title: "ניבים"

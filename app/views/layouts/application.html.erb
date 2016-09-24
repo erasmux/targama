@@ -9,6 +9,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar">
+      <ul class="nav">
+        <li><%= link_to t('nav.logo'), root_url %></li>
+        <li><%= link_to t('nav.twords'), twords_path %></li>
+        <li><%= link_to t('nav.gram_forms'), gram_forms_path %></li>
+        <li><%= link_to t('nav.dialects'), dialects_path %></li>
+      </ul>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

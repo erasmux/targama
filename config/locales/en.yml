@@ -22,7 +22,12 @@ en:
         word_inflection: "inflection"
         gram_form_id: *model_gram_form
 
-  # views:
+  # views and layouts:
+  nav:
+    logo: "Targama"
+    twords: "Arabic words"
+    gram_forms: "Grammatical forms"
+    dialects: "Dialects"
   dialects:
     index:
       title: "Dialects"
