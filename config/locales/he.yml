@@ -31,6 +31,10 @@ he:
     twords: "מילים בערבית"
     gram_forms: "צורות דיקדוקיות"
     dialects: "ניבים"
+  home:
+    index:
+      welcome: "ברוכים הבאים לתרגמא."
+      under_construction: "האתר בבניה."
   dialects:
     index:
       title: "ניבים"

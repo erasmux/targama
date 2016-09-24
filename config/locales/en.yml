@@ -28,6 +28,10 @@ en:
     twords: "Arabic words"
     gram_forms: "Grammatical forms"
     dialects: "Dialects"
+  home:
+    index:
+      welcome: "Welcome to Targama."
+      under_construction: "Site under construction."
   dialects:
     index:
       title: "Dialects"
