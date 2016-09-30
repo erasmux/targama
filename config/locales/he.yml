@@ -21,8 +21,8 @@ he:
         word: *config_tword
         word_short: "מילה"
         word_inflection: "הטיה"
-        gram_form_id: *model_gram_form
-        dialect_id: *model_dialect
+        gram_form: *model_gram_form
+        dialect: *model_dialect
         additional_info: "מידע נוסף"
 
   # views and layouts:

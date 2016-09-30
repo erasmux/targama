@@ -1,30 +1,11 @@
-<main class="simple_form_style">
-  <%= form_for @record do |f| %>
-    <p>
-      <%= f.label :word %>
-      <%= f.text_field :word %>
-    </p>
-    <p>
-      <%= f.label :word_inflection %>
-      <%= f.text_field :word_inflection %>
-    </p>
-    <p>
-      <%= f.label :gram_form_id %>
-      <%= f.collection_select(:gram_form_id, GramForm.all, :id, :name, {prompt: ''})  %>
-    </p>
-    <p>
-      <%= f.label :dialect_id %>
-      <%= f.collection_select(:dialect_id, Dialect.all, :id, :name, {prompt: ''}) %>
-    </p>
-    <p>
-      <%= f.label :additional_info %>
-      <%= f.text_area :additional_info %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
+<%= simple_form_for @record do |f| %>
+  <%= f.input :word %>
+  <%= f.input :word_inflection %>
+  <%= f.association :gram_form %>
+  <%= f.association :dialect %>
+  <%= f.input :additional_info, as: :text %>
+  <%= f.button :submit %>
 <% end %>
-</main>
 
 <% if pending_errors? %>
   <div id="error_explanation">

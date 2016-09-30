@@ -1,18 +1,3 @@
 body {
   direction: rtl;
 }
-
-/* todo: seperate simple_form_style styles and do ltr/rtl smarter... */
-
-.simple_form_style {
-  display: flex;
-}
-
-.simple_form_style label {
-  display: inline-block;
-  width: 7em;
-}
-
-.simple_form_style textarea {
-  vertical-align: middle;
-}
